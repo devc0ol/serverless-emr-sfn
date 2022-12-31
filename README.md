@@ -37,11 +37,13 @@ Step 7 : Execute the terraform template after executing the following commands a
 ### Terraform Run Template
 ```terraform apply```
 
-Step 8 : In trigger_job commons.py file **executionRoleArn='<role created out from terraform output>'** needs to be changed after the first run of terraform is complete. This can be gotten from the above **emr_serverless_execution_role_arn** from outputs. Once replaced, execute Step 6 for the trigger_job folder and zip it again. Once again deploy the trigger_job lambda by using ```terraform apply```.
+Step 8 : Verify if 15 objects have been deployed.
 
-Step 9 : Verify if 15 objects have been created.
+Step 9 : In trigger_job commons.py file **executionRoleArn='role created out from terraform output'** needs to be changed after the first run of terraform is complete. This can be gotten from the above **emr_serverless_execution_role_arn** from outputs. Once replaced, execute Step 6 for the trigger_job folder and zip it again. Once again deploy the trigger_job lambda by using ```terraform apply```.
 
-Step 10 : Go to your step function and trigger your job with the following payload.
+Step 10 : Verify if 15 objects have been created.
+
+Step 11 : Go to your step function and trigger your job with the following payload.
 
 ```
 {
