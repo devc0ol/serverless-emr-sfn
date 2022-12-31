@@ -22,12 +22,12 @@ zip -rj trigger_job.zip trigger_job/*.py
 
 Step 7 : Execute the terraform template after executing the following commands and keep an eye on the output arn of emr_serverless_execution_role_arn
 
-# Terraform Commands
-# Terraform Initiate Project
+## Terraform Commands
+### Terraform Initiate Project
 terraform init
-# Terraform Check Templates
+### Terraform Check Templates
 terraform fmt
-# Terraform Run Template
+### Terraform Run Template
 terraform apply
 
 Step 8 : In trigger_job commons.py file executionRoleArn='<role created out from terraform output>' needs to be changed after the first run of terraform is complete. This can be gotten from the above emr_serverless_execution_role_arn from outputs. Once replaced, execute Step 6 for the trigger_job folder and zip it again. Once again deploy the trigger_job lambda by using terraform apply.
